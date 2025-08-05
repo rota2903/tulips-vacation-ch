@@ -16,41 +16,53 @@
     .container {
       max-width: 800px;
       margin: 60px auto;
-      padding: 30px;
+      padding: 40px;
       background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       text-align: center;
     }
-    h1, h2 {
+    h2 {
       color: #2c3e50;
+      font-size: 28px;
+      margin-bottom: 15px;
     }
     p {
       font-size: 18px;
       color: #555;
+      margin-bottom: 30px;
     }
     .dropdown {
       margin: 20px 0;
       font-size: 16px;
     }
+    .dropdown select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 300px;
+    }
     .btn {
       display: inline-block;
       padding: 12px 24px;
-      margin: 10px 10px 0 10px;
+      margin: 10px 5px;
       font-size: 16px;
       font-weight: bold;
-      color: white;
       text-decoration: none;
       border-radius: 6px;
+      cursor: pointer;
     }
     .btn-primary {
       background-color: #0077cc;
+      color: white;
     }
     .btn-primary:hover {
       background-color: #005fa3;
     }
     .btn-secondary {
       background-color: #27ae60;
+      color: white;
     }
     .btn-secondary:hover {
       background-color: #219653;
@@ -59,7 +71,6 @@
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to Tulips Vacation CH</h1>
     <h2>Our 9 Vacation Units</h2>
     <p>
       Choose from 4 cozy houses and 5 modern apartments. 
@@ -68,22 +79,22 @@
 
     <!-- Unit Gallery Dropdown -->
     <div class="dropdown">
-      <label for="unitSelect"><strong>View Unit Gallery:</strong></label>
-      <select id="unitSelect" onchange="goToGallery()" style="padding: 8px; margin-left: 10px;">
+      <label for="unitSelect"><strong>View Unit Gallery:</strong></label><br><br>
+      <select id="unitSelect" onchange="goToGallery()">
         <option value="">-- Choose a Unit --</option>
-        <option value="unit1/tulip1gallery.html">TULIP 1: B8-3-5</option>
-        <option value="unit2/tulip2gallery.html">TULIP 2: B8-3-11</option>
-        <option value="unit3/tulip3gallery.html">TULIP 3: B8-3A-3</option>
-        <option value="unit4/tulip4gallery.html">TULIP 4: B8-3A-3A</option>
-        <option value="unit5/tulip5gallery.html">TULIP 5: B8-3A-11</option>
-        <option value="unit6/tulip6gallery.html">TULIP 6: Semi-D No.11</option>
-        <option value="unit7/tulip7gallery.html">TULIP 7: Semi-D No.14</option>
-        <option value="unit8/tulip8gallery.html">TULIP 8: Terrace No.3</option>
-        <option value="unit9/tulip9gallery.html">TULIP 9: Terrace No.18</option>
+        <option value="unit1.html">TULIP 1: B8-3-5</option>
+        <option value="unit2.html">TULIP 2: B8-3-11</option>
+        <option value="unit3.html">TULIP 3: B8-3A-3</option>
+        <option value="unit4.html">TULIP 4: B8-3A-3A</option>
+        <option value="unit5.html">TULIP 5: B8-3A-11</option>
+        <option value="unit6.html">TULIP 6: Semi-D No.11</option>
+        <option value="unit7.html">TULIP 7: Semi-D No.14</option>
+        <option value="unit8.html">TULIP 8: Terrace No.3</option>
+        <option value="unit9.html">TULIP 9: Terrace No.18</option>
       </select>
     </div>
 
-    <!-- Booking Button (Links to your separate site) -->
+    <!-- Booking Button -->
     <a href="https://rota2903.github.io/tulips-booking/" target="_blank" class="btn btn-primary">
       Go to Booking Page
     </a>
