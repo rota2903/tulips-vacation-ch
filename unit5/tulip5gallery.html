@@ -2,53 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TULIP 5 - Unit Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TULIP 5: B8-3A-3A</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f9fc;
       margin: 0;
       padding: 20px;
-      color: #333;
+      text-align: center;
     }
     h1 {
-      text-align: center;
-      margin-bottom: 20px;
+      color: #2c3e50;
+      font-size: 28px;
+      margin: 20px 0;
     }
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px auto;
+      max-width: 900px;
     }
     .gallery img {
-      width: 100%;
-      height: auto;
+      width: 300px;
+      height: 220px;
+      object-fit: cover;
       border-radius: 8px;
-      border: 1px solid #ccc;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .back-link {
-      display: block;
-      margin: 30px auto 10px;
-      text-align: center;
-      font-size: 16px;
-      color: #007BFF;
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 30px 0 20px;
+      background-color: #3498db;
+      color: white;
       text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #2980b9;
     }
   </style>
 </head>
 <body>
-  <h1>TULIP 5 - Unit Gallery</h1>
+  <!-- ✅ Title matches dropdown exactly -->
+  <h1>TULIP 5: B8-3A-3A</h1>
+
   <div class="gallery">
-    <img src="images/unit1/img1.jpg" alt="Image 1">
-    <img src="images/unit1/img2.jpg" alt="Image 2">
-    <img src="images/unit1/img3.jpg" alt="Image 3">
-    <img src="images/unit1/img4.jpg" alt="Image 4">
-    <img src="images/unit1/img5.jpg" alt="Image 5">
-    <img src="images/unit1/img6.jpg" alt="Image 6">
-    <img src="images/unit1/img7.jpg" alt="Image 7">
-    <img src="images/unit1/img8.jpg" alt="Image 8">
+    <!-- Replace with real images later -->
+    <img src="https://via.placeholder.com/300x220?text=Living+Room" alt="Living Room">
+    <img src="https://via.placeholder.com/300x220?text=Bedroom" alt="Bedroom">
+    <img src="https://via.placeholder.com/300x220?text=Kitchen" alt="Kitchen">
+    <img src="https://via.placeholder.com/300x220?text=Bathroom" alt="Bathroom">
+    <img src="https://via.placeholder.com/300x220?text=Balcony" alt="Balcony">
+    <img src="https://via.placeholder.com/300x220?text=View" alt="Mountain View">
   </div>
-  <a href="../index.html">Back to Home</a>
+
+  <!-- Return to Home -->
+  <a href="index.html" class="btn">← Return to Home</a>
 </body>
 </html>
