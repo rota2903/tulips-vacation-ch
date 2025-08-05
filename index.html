@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tulips Vacation Stay - Cameron Highlands</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Cameron_Highlands_Tea_Plantation.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+    .content {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    select {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    .booking-link {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 15px 25px;
+      background-color: #3e8e41;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ddd;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tulips Vacation Stay</h1>
+    <p>Experience cool weather, lush greenery, and tea plantations in beautiful Cameron Highlands, Pahang. A perfect family escape awaits you!</p>
+  </header>
+
+  <div class="content">
+    <h2>Our 9 Vacation Units</h2>
+    <p>Choose from 4 cozy houses and 5 modern apartments. Each unit offers a relaxing stay with beautiful views.</p>
+
+    <label for="unitSelect">View Unit Gallery:</label><br>
+    <select id="unitSelect" onchange="navigateToUnit(this.value)">
+      <option value="">-- Select Unit --</option>
+      <option value="unit1.html">TULIP 1</option>
+      <option value="unit2.html">TULIP 2</option>
+      <option value="unit3.html">TULIP 3</option>
+      <option value="unit4.html">TULIP 4</option>
+      <option value="unit5.html">TULIP 5</option>
+      <option value="unit6.html">TULIP 6</option>
+      <option value="unit7.html">TULIP 7</option>
+      <option value="unit8.html">TULIP 8</option>
+      <option value="unit9.html">TULIP 9</option>
+    </select>
+
+    <br><br>
+    <a href="tulips-booking/index.html" class="booking-link">Go to Booking Page</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Tulips Vacation Stay. All rights reserved.
+  </footer>
+
+  <script>
+    function navigateToUnit(page) {
+      if (page) {
+        window.location.href = page;
+      }
+    }
+  </script>
+</body>
+</html>
