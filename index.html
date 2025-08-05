@@ -2,98 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tulips Vacation Stay - Cameron Highlands</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tulips Vacation CH</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
       margin: 0;
       padding: 0;
-      color: #333;
+      line-height: 1.6;
     }
-    header {
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Cameron_Highlands_Tea_Plantation.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: auto;
-    }
-    .content {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    select {
-      padding: 10px;
-      font-size: 16px;
-      margin-top: 20px;
-    }
-    .booking-link {
-      display: inline-block;
-      margin-top: 40px;
-      padding: 15px 25px;
-      background-color: #3e8e41;
-      color: white;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    footer {
-      text-align: center;
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
       padding: 20px;
-      background-color: #ddd;
-      font-size: 14px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+    }
+    .booking-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: #0077cc;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+    .booking-btn:hover {
+      background-color: #005fa3;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Tulips Vacation Stay</h1>
-    <p>Experience cool weather, lush greenery, and tea plantations in beautiful Cameron Highlands, Pahang. A perfect family escape awaits you!</p>
-  </header>
-
-  <div class="content">
+  <div class="container">
     <h2>Our 9 Vacation Units</h2>
-    <p>Choose from 4 cozy houses and 5 modern apartments. Each unit offers a relaxing stay with beautiful views.</p>
-    <a href="https://rota2903.github.io/tulips-booking/" target="_blank" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #0077cc; text-decoration: none; border-radius: 5px; margin-top: 10px;">Go to Booking Page</a>
-    <label for="unitSelect">View Unit Gallery:</label><br>
-    <select id="unitSelect" onchange="navigateToUnit(this.value)">
-      <option value="">-- Select Unit --</option>
-      <option value="unit1/tulip1gallery.html">TULIP 1</option>
-      <option value="unit2/tulip2gallery.html">TULIP 2</option>
-      <option value="unit3/tulip3gallery.html">TULIP 3</option>
-      <option value="unit4/tulip4gallery.html">TULIP 4</option>
-      <option value="unit5/tulip5gallery.html">TULIP 5</option>
-      <option value="unit6/tulip6gallery.html">TULIP 6</option>
-      <option value="unit7/tulip7gallery.html">TULIP 7</option>
-      <option value="unit8/tulip8gallery.html">TULIP 8</option>
-      <option value="unit9/tulip9gallery.html">TULIP 9</option>
-    </select>
-
-    <br><br>
-    <a href="tulips-booking/index.html" class="booking-link">Go to Booking Page</a>
+    <p>
+      Choose from 4 cozy houses and 5 modern apartments. 
+      Each unit offers a relaxing stay with beautiful views.
+    </p>
+    <!-- Booking Button (Blue, Working, Properly Styled) -->
+    <a href="https://rota2903.github.io/tulips-booking/" 
+       target="_blank" 
+       class="booking-btn">
+       Go to Booking Page
+    </a>
   </div>
-
-  <footer>
-    &copy; 2025 Tulips Vacation Stay. All rights reserved.
-  </footer>
-
-  <script>
-    function navigateToUnit(page) {
-      if (page) {
-        window.location.href = page;
-      }
-    }
-  </script>
 </body>
 </html>
