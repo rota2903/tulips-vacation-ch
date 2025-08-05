@@ -3,62 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TULIPS Booking System</title>
+  <title>Tulips Vacation CH</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
-      margin: 40px;
-      background-color: #f4f4f4;
     }
-    h1 { color: #2c3e50; }
-    select, button {
-      padding: 10px;
+    h1, h2 {
+      color: #2c3e50;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+    }
+    .dropdown {
+      margin: 20px 0;
       font-size: 16px;
-      margin: 20px;
-      width: 250px;
     }
-    button {
-      background-color: #0077cc;
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px 10px 0 10px;
+      font-size: 16px;
+      font-weight: bold;
       color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
+      text-decoration: none;
+      border-radius: 6px;
     }
-    button:hover {
+    .btn-primary {
+      background-color: #0077cc;
+    }
+    .btn-primary:hover {
       background-color: #005fa3;
+    }
+    .btn-secondary {
+      background-color: #27ae60;
+    }
+    .btn-secondary:hover {
+      background-color: #219653;
     }
   </style>
 </head>
 <body>
-  <h1>TULIPS Booking System</h1>
-  <p>Select a unit to check availability and book:</p>
-  
-  <select id="unitSelect">
-    <option>-- Choose a Unit --</option>
-    <option>TULIP 1: B8-3-5</option>
-    <option>TULIP 2: B8-3-11</option>
-    <option>TULIP 3: B8-3A-3</option>
-    <option>TULIP 4: B8-3A-3A</option>
-    <option>TULIP 5: B8-3A-11</option>
-    <option>TULIP 6: Semi-D No.11</option>
-    <option>TULIP 7: Semi-D No.14</option>
-    <option>TULIP 8: Terrace No.3</option>
-    <option>TULIP 9: Terrace No.18</option>
-  </select>
+  <div class="container">
+    <h1>Welcome to Tulips Vacation CH</h1>
+    <h2>Our 9 Vacation Units</h2>
+    <p>
+      Choose from 4 cozy houses and 5 modern apartments. 
+      Each unit offers a relaxing stay with beautiful views.
+    </p>
 
-  <br>
-  <button onclick="openUnit()">Open Unit</button>
+    <!-- Unit Gallery Dropdown -->
+    <div class="dropdown">
+      <label for="unitSelect"><strong>View Unit Gallery:</strong></label>
+      <select id="unitSelect" onchange="goToGallery()" style="padding: 8px; margin-left: 10px;">
+        <option value="">-- Choose a Unit --</option>
+        <option value="unit1/tulip1gallery.html">TULIP 1: B8-3-5</option>
+        <option value="unit2/tulip2gallery.html">TULIP 2: B8-3-11</option>
+        <option value="unit3/tulip3gallery.html">TULIP 3: B8-3A-3</option>
+        <option value="unit4/tulip4gallery.html">TULIP 4: B8-3A-3A</option>
+        <option value="unit5/tulip5gallery.html">TULIP 5: B8-3A-11</option>
+        <option value="unit6/tulip6gallery.html">TULIP 6: Semi-D No.11</option>
+        <option value="unit7/tulip7gallery.html">TULIP 7: Semi-D No.14</option>
+        <option value="unit8/tulip8gallery.html">TULIP 8: Terrace No.3</option>
+        <option value="unit9/tulip9gallery.html">TULIP 9: Terrace No.18</option>
+      </select>
+    </div>
+
+    <!-- Booking Button (Links to your separate site) -->
+    <a href="https://rota2903.github.io/tulips-booking/" target="_blank" class="btn btn-primary">
+      Go to Booking Page
+    </a>
+  </div>
 
   <script>
-    function openUnit() {
-      const selected = document.getElementById('unitSelect').value;
-      if (selected !== '-- Choose a Unit --' && selected) {
-        alert('Opening booking page for: ' + selected);
-        // You can replace this with actual booking logic or a link
-        // Example: window.location.href = 'form.html?unit=' + encodeURIComponent(selected);
-      } else {
-        alert('Please select a unit first.');
+    function goToGallery() {
+      const page = document.getElementById("unitSelect").value;
+      if (page) {
+        window.location.href = page;
       }
     }
   </script>
