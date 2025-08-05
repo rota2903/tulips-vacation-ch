@@ -5,131 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tulips Vacation CH</title>
   <style>
-    /* Full-page background image (Cameron Highlands) */
+    /* Background Image (Responsive & Mobile-Friendly) */
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Cameron_Highlands%2C_Malaysia.jpg/1920px-Cameron_Highlands%2C_Malaysia.jpg');
+      font-family: 'Arial', sans-serif;
+      background-image: url('bg.jpg'); /* Upload your bg.jpg to repo */
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       background-repeat: no-repeat;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Semi-transparent overlay for readability */
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 50px;
-      border-radius: 15px;
-      max-width: 800px;
-      width: 90%;
+      color: white;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-    h2 {
-      font-size: 2.5em;
-      margin-bottom: 15px;
-      color: #a8dadc;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    /* Semi-transparent overlay for text readability */
+    .page {
+      background-color: rgba(0, 0, 0, 0.5);
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Logo styling (responsive) */
+    .logo {
+      max-width: 200px;
+      width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    h2, p, a {
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     }
 
     p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-      color: #e0e0e0;
-      line-height: 1.6;
+      font-size: 18px;
+      margin: 15px 0;
     }
 
-    /* Dropdown styling */
-    .dropdown {
-      margin: 20px 0;
-    }
-
-    .dropdown select {
-      padding: 12px;
-      font-size: 16px;
-      width: 320px;
-      border: none;
-      border-radius: 6px;
-      background-color: #fff;
-      color: #333;
-      cursor: pointer;
-    }
-
-    .dropdown select:focus {
-      outline: 2px solid #a8dadc;
-    }
-
-    /* Button styling */
+    /* Booking Button */
     .btn {
       display: inline-block;
-      padding: 14px 28px;
-      margin: 10px 10px 0;
+      padding: 12px 24px;
+      margin-top: 20px;
       font-size: 16px;
       font-weight: bold;
+      color: white;
+      background-color: #0077cc;
       text-decoration: none;
       border-radius: 6px;
-      transition: transform 0.2s, box-shadow 0.2s;
     }
-
     .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
-
-    .btn-primary {
-      background-color: #0077cc;
-      color: white;
-    }
-
-    .btn-primary:hover {
       background-color: #005fa3;
     }
 
-    .btn-secondary {
-      background-color: #27ae60;
-      color: white;
-    }
-
-    .btn-secondary:hover {
-      background-color: #219653;
+    /* Dropdown */
+    select {
+      padding: 8px;
+      font-size: 16px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
+  <div class="page">
+    <!-- Logo (Upload logo.png to your repo) -->
+    <img src="logo.png" alt="Tulips Vacation Logo" class="logo">
+
     <h2>Our 9 Vacation Units</h2>
     <p>
       Choose from 4 cozy houses and 5 modern apartments. 
-      Each unit offers a relaxing stay with beautiful views in the serene Cameron Highlands.
+      Each unit offers a relaxing stay with beautiful views.
     </p>
 
     <!-- Unit Gallery Dropdown -->
-    <div class="dropdown">
-      <label for="unitSelect"><strong>View Unit Gallery:</strong></label><br><br>
-      <select id="unitSelect" onchange="goToGallery()">
-        <option value="">-- Choose a Unit --</option>
-        <option value="unit1/tulip1gallery.html">TULIP 1: B8-3-5</option>
-        <option value="unit2/tulip2gallery.html">TULIP 2: B8-3-11</option>
-        <option value="unit3/tulip3gallery.html">TULIP 3: B8-3A-3</option>
-        <option value="unit4/tulip4gallery.html">TULIP 4: B8-3A-3A</option>
-        <option value="unit5/tulip5gallery.html">TULIP 5: B8-3A-11</option>
-        <option value="unit6/tulip6gallery.html">TULIP 6: Semi-D No.11</option>
-        <option value="unit7/tulip7gallery.html">TULIP 7: Semi-D No.14</option>
-        <option value="unit8/tulip8gallery.html">TULIP 8: Terrace No.3</option>
-        <option value="unit9/tulip9gallery.html">TULIP 9: Terrace No.18</option>
-      </select>
-    </div>
+    <select id="unitSelect" onchange="goToGallery()" style="padding: 8px; margin-left: 10px;">
+      <option value="">-- Choose a Unit --</option>
+      <option value="unit1/tulip1gallery.html">TULIP 1: B8-3-5</option>
+      <option value="unit2/tulip2gallery.html">TULIP 2: B8-3-11</option>
+      <option value="unit3/tulip3gallery.html">TULIP 3: B8-3A-3</option>
+      <option value="unit4/tulip4gallery.html">TULIP 4: B8-3A-3A</option>
+      <option value="unit5/tulip5gallery.html">TULIP 5: B8-3A-11</option>
+      <option value="unit6/tulip6gallery.html">TULIP 6: Semi-D No.11</option>
+      <option value="unit7/tulip7gallery.html">TULIP 7: Semi-D No.14</option>
+      <option value="unit8/tulip8gallery.html">TULIP 8: Terrace No.3</option>
+      <option value="unit9/tulip9gallery.html">TULIP 9: Terrace No.18</option>
+    </select>
 
     <!-- Booking Button -->
-    <a href="https://rota2903.github.io/tulips-booking/" target="_blank" class="btn btn-primary">
+    <a href="https://rota2903.github.io/tulips-booking/" target="_blank" class="btn">
       Go to Booking Page
     </a>
   </div>
