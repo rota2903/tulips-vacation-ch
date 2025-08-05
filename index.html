@@ -3,62 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tulips Vacation CH</title>
+  <title>TULIPS Booking System</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
       text-align: center;
+      margin: 40px;
+      background-color: #f4f4f4;
     }
-    h2 {
-      color: #2c3e50;
-    }
-    p {
-      font-size: 18px;
-      color: #555;
-    }
-    .booking-btn {
-      display: inline-block;
-      padding: 12px 24px;
+    h1 { color: #2c3e50; }
+    select, button {
+      padding: 10px;
       font-size: 16px;
-      font-weight: bold;
-      color: white;
-      background-color: #0077cc;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 15px;
-      transition: background-color 0.3s ease;
+      margin: 20px;
+      width: 250px;
     }
-    .booking-btn:hover {
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
       background-color: #005fa3;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Our 9 Vacation Units</h2>
-    <p>
-      Choose from 4 cozy houses and 5 modern apartments. 
-      Each unit offers a relaxing stay with beautiful views.
-    </p>
-    <!-- Booking Button (Blue, Working, Properly Styled) -->
-    <a href="https://rota2903.github.io/tulips-booking/" 
-       target="_blank" 
-       class="booking-btn">
-       Go to Booking Page
-    </a>
-  </div>
+  <h1>TULIPS Booking System</h1>
+  <p>Select a unit to check availability and book:</p>
+  
+  <select id="unitSelect">
+    <option>-- Choose a Unit --</option>
+    <option>TULIP 1: B8-3-5</option>
+    <option>TULIP 2: B8-3-11</option>
+    <option>TULIP 3: B8-3A-3</option>
+    <option>TULIP 4: B8-3A-3A</option>
+    <option>TULIP 5: B8-3A-11</option>
+    <option>TULIP 6: Semi-D No.11</option>
+    <option>TULIP 7: Semi-D No.14</option>
+    <option>TULIP 8: Terrace No.3</option>
+    <option>TULIP 9: Terrace No.18</option>
+  </select>
+
+  <br>
+  <button onclick="openUnit()">Open Unit</button>
+
+  <script>
+    function openUnit() {
+      const selected = document.getElementById('unitSelect').value;
+      if (selected !== '-- Choose a Unit --' && selected) {
+        alert('Opening booking page for: ' + selected);
+        // You can replace this with actual booking logic or a link
+        // Example: window.location.href = 'form.html?unit=' + encodeURIComponent(selected);
+      } else {
+        alert('Please select a unit first.');
+      }
+    }
+  </script>
 </body>
 </html>
