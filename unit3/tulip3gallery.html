@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TULIP 3: B8-3A-3</title>
+  <title>TULIP 1: B8-3-5</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       text-align: center;
       background: #f7f9fc;
       margin: 0;
@@ -14,20 +14,15 @@
     }
     h1 {
       color: #2c3e50;
+      margin: 20px 0;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin: 20px auto;
-      max-width: 900px;
-    }
-    .gallery img {
-      width: 300px;
-      height: 220px;
-      object-fit: cover;
+    .collage {
+      max-width: 100%;
+      height: auto;
       border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 10px auto;
+      display: block;
     }
     .btn {
       display: inline-block;
@@ -37,20 +32,21 @@
       color: white;
       text-decoration: none;
       border-radius: 6px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #2980b9;
     }
   </style>
 </head>
 <body>
-  <h1>TULIP 3: B8-3A-3</h1>
+  <!-- Update this title for each unit -->
+  <h1>TULIP 1: B8-3-5</h1>
 
-  <div class="gallery">
-    <img src="https://via.placeholder.com/300x220?text=Room+1" alt="Room 1">
-    <img src="https://via.placeholder.com/300x220?text=Room+2" alt="Room 2">
-    <img src="https://via.placeholder.com/300x220?text=Room+3" alt="Room 3">
-    <!-- Add more images as needed -->
-  </div>
+  <!-- Update 'collage1.jpg' to your actual collage filename -->
+  <img src="unit3.jpg" alt="TULIP 3" class="collage">
 
-  <!-- ✅ Correct path to return to root index.html -->
+  <!-- Link back to main site -->
   <a href="../index.html" class="btn">← Return to Home</a>
 </body>
 </html>
