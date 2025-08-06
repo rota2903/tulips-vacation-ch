@@ -5,114 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tulips Vacation CH</title>
   <style>
-    /* Background Image (Responsive & Mobile-Friendly) */
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-image: url('bg.jpg'); /* Upload your bg.jpg to repo */
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-      color: white;
+      font-family: Arial, sans-serif;
       text-align: center;
+      padding: 50px;
+      background: #f0f4f8;
+      color: #333;
     }
-
-    /* Semi-transparent overlay for text readability */
-    .page {
-      background-color: rgba(0, 0, 0, 0.5);
-      min-height: 100vh;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    h2 {
+      color: #2c3e50;
     }
-
-    /* Logo styling (responsive) */
-    .logo {
-      max-width: 200px;
-      width: 80%;
-      height: auto;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-
-    h2, p, a {
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    }
-
     p {
       font-size: 18px;
-      margin: 15px 0;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
-
-    /* Booking Button */
     .btn {
       display: inline-block;
       padding: 12px 24px;
-      margin-top: 20px;
       font-size: 16px;
       font-weight: bold;
       color: white;
       background-color: #0077cc;
       text-decoration: none;
       border-radius: 6px;
+      margin-top: 15px;
     }
     .btn:hover {
       background-color: #005fa3;
     }
-
-    /* Dropdown */
-    select {
-      padding: 8px;
-      font-size: 16px;
-      margin: 10px 0;
-      border-radius: 4px;
-      border: none;
-    }
   </style>
 </head>
 <body>
-  <div class="page">
-    <!-- Logo (Upload logo.png to your repo) -->
-    <img src="logo.png" alt="Tulips Vacation Logo" class="logo">
+  <h2>Our 9 Vacation Units</h2>
+  <p>
+    Choose from 4 cozy houses and 5 modern apartments. 
+    Each unit offers a relaxing stay with beautiful views.
+  </p>
 
-    <h2>Our 9 Vacation Units</h2>
-    <p>
-      Choose from 4 cozy houses and 5 modern apartments. 
-      Each unit offers a relaxing stay with beautiful views.
-    </p>
-
-    <!-- Unit Gallery Dropdown -->
-    <select id="unitSelect" onchange="goToGallery()" style="padding: 8px; margin-left: 10px;">
-      <option value="">-- Choose a Unit --</option>
-      <option value="unit1/tulip1gallery.html">TULIP 1: B8-3-5</option>
-      <option value="unit2/tulip2gallery.html">TULIP 2: B8-3-11</option>
-      <option value="unit3/tulip3gallery.html">TULIP 3: B8-3A-3</option>
-      <option value="unit4/tulip4gallery.html">TULIP 4: B8-3A-3A</option>
-      <option value="unit5/tulip5gallery.html">TULIP 5: B8-3A-11</option>
-      <option value="unit6/tulip6gallery.html">TULIP 6: Semi-D No.11</option>
-      <option value="unit7/tulip7gallery.html">TULIP 7: Semi-D No.14</option>
-      <option value="unit8/tulip8gallery.html">TULIP 8: Terrace No.3</option>
-      <option value="unit9/tulip9gallery.html">TULIP 9: Terrace No.18</option>
-    </select>
-
-    <!-- Booking Button -->
-    <a href="https://rota2903.github.io/tulips-booking/" target="_blank">Go to Booking Page</a>
-    </a>
-  </div>
-
-  <script>
-    function goToGallery() {
-      const page = document.getElementById("unitSelect").value;
-      if (page) {
-        window.location.href = page;
-      }
-    }
-  </script>
+  <!-- Fixed: Now a real, styled button -->
+  <a href="https://rota2903.github.io/tulips-booking/" target="_blank" class="btn">
+    Go to Booking Page
+  </a>
 </body>
 </html>
