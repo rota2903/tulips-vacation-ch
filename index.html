@@ -21,6 +21,14 @@
       max-width: 700px;
       margin: 0 auto 20px;
     }
+    .dropdown {
+      margin: 20px 0;
+    }
+    select {
+      padding: 10px;
+      font-size: 16px;
+      width: 250px;
+    }
     .btn {
       display: inline-block;
       padding: 12px 24px;
@@ -30,7 +38,7 @@
       background-color: #0077cc;
       text-decoration: none;
       border-radius: 6px;
-      margin-top: 15px;
+      margin: 10px 0;
     }
     .btn:hover {
       background-color: #005fa3;
@@ -44,9 +52,35 @@
     Each unit offers a relaxing stay with beautiful views.
   </p>
 
-  <!-- Fixed: Now a real, styled button -->
+  <!-- Unit Gallery Dropdown -->
+  <div class="dropdown">
+    <label for="unitSelect"><strong>View Unit Gallery:</strong></label><br><br>
+    <select id="unitSelect" onchange="goToGallery()">
+      <option value="">-- Choose a Unit --</option>
+      <option value="unit1/tulip1gallery.html">TULIP 1: B8-3-5</option>
+      <option value="unit2/tulip2gallery.html">TULIP 2: B8-3-11</option>
+      <option value="unit3/tulip3gallery.html">TULIP 3: B8-3A-3</option>
+      <option value="unit4/tulip4gallery.html">TULIP 4: B8-3A-3A</option>
+      <option value="unit5/tulip5gallery.html">TULIP 5: B8-3A-11</option>
+      <option value="unit6/tulip6gallery.html">TULIP 6: Semi-D No.11</option>
+      <option value="unit7/tulip7gallery.html">TULIP 7: Semi-D No.14</option>
+      <option value="unit8/tulip8gallery.html">TULIP 8: Terrace No.3</option>
+      <option value="unit9/tulip9gallery.html">TULIP 9: Terrace No.18</option>
+    </select>
+  </div>
+
+  <!-- Booking Button -->
   <a href="https://rota2903.github.io/tulips-booking/" target="_blank" class="btn">
     Go to Booking Page
   </a>
+
+  <script>
+    function goToGallery() {
+      const page = document.getElementById("unitSelect").value;
+      if (page) {
+        window.location.href = page;
+      }
+    }
+  </script>
 </body>
 </html>
